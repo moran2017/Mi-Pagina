@@ -1,0 +1,456 @@
+﻿
+{
+@{
+    ViewBag.Title = "Body";
+}
+
+
+
+
+<!-- Header -->
+<header class="masthead">
+    <div class="container">
+        <img class="img-fluid" src=@Url.Content("~/Content/img/Yo.jpg") style="width:25%; height:30%;" alt="">
+        <div class="intro-text">
+            <span class="name">Héctor Morán Frayre</span>
+            <hr class="star-light">
+            <span class="skills">Desarrollador Web - Ingeniero en Sistemas Computacionales</span>
+        </div>
+    </div>
+
+</header>
+
+<!-- Portfolio Grid Section -->
+<section id="portfolio">
+    <div class="container">
+        <h2 class="text-center">Portfolio</h2>
+        <hr class="star-primary">
+        <div class="row">
+            <div class="col-sm-4 portfolio-item">
+                <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src=@Url.Content("~/Content/img/portfolio/Invernadero.png") alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a class="portfolio-link" href="#portfolioModal2" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src=@Url.Content("~/Content/img/portfolio/Onpe.png") alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a class="portfolio-link" href="#portfolioModal3" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src=@Url.Content("~/Content/img/portfolio/Game.png") alt="">
+                </a>
+            </div>
+            <div class="col-sm-4 portfolio-item">
+                <a class="portfolio-link" href="#portfolioModal4" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src=@Url.Content("~/Content/img/portfolio/Deportistas.png") alt="">
+                </a>
+            </div>
+                    <div class="col-sm-4 portfolio-item">
+                <a class="portfolio-link" href="#portfolioModal6" data-toggle="modal">
+                    <div class="caption">
+                        <div class="caption-content">
+                            <i class="fa fa-search-plus fa-3x"></i>
+                        </div>
+                    </div>
+                    <img class="img-fluid" src=@Url.Content("~/Content/img/portfolio/tot.png") alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="success" id="about">
+    <div class="container">
+        <h2 class="text-center">Acerca De</h2>
+        <hr class="star-light">
+        <div class="row">
+            <div class="col-lg-10 ml-auto">
+                <p>
+                    Ingeniero en Sistemas Computacionales y estudiante  de la Universidad de Ciencias Aplicadas de Perú
+                    Desde hace 3 años que empece a prepararme  he contribuido en diversos proyecto de Desarrollo
+                    Web. 
+                    Entusiasta del diseño y apasionado por la tecnología. 
+                </p>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2 class="text-center">Contactame</h2>
+        <hr class="star-primary">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Nombre</label>
+                            <input class="form-control" id="name" type="text" placeholder="Nombre" required data-validation-required-message="Por favor, ingresa tu nombre.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Correo Electronico</label>
+                            <input class="form-control" id="email" type="email" placeholder="Correo Electronico" required data-validation-required-message="Por favr, ingresa tu correo electronico.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Numero Celular</label>
+                            <input class="form-control" id="phone" type="tel" placeholder="N° de Celular" required data-validation-required-message="Por favor, ingresa tu telefono celular.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Mensaje" required data-validation-required-message="Please enter a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top d-lg-none">
+    <a class="btn btn-primary js-scroll-trigger" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+
+<!-- Portfolio Modals -->
+<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                            <h2>Invernadero</h2>
+                            <hr class="star-primary">
+                            <img class="img-fluid img-centered" src=@Url.Content("~/Content/img/portfolio/Invernadero.png") style="width:200%; height:110%;">
+                            <p>
+                                El proyecto consiste basicamnte en un Invernadero Inteligente. Este rebada datos de
+                                Temperatura, Humedad y Luminosidad, mediante sensores, que se hubican dentro del Invernadero.
+                                Además, cuenta con una interface grafica, para el usuario pueda visualiza las mediciones
+                                y ofrece una serie de graficas para ver las variaciones que tuvo el Invernadero durante el dia.
+                            </p>
+                            <p>
+                                Este proyecto se relizo con PHP, MSSQL, JQ, HTML5.
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>
+                                    Cliente:
+                                    <strong>
+                                        <a>Electronica UVM Campus San Ángel</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Fecha:
+                                    <strong>
+                                        <a>Noviembre 2016</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Service:
+                                    <strong>
+                                        <a>Desarrollo Web  | Internet de las Cosas</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button class="btn btn-success" type="button" data-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                            <h2>Onpe</h2>
+                            <hr class="star-primary">
+                            <img class="img-fluid img-centered" src=@Url.Content("~/Content/img/portfolio/Onpe.png") alt="">
+                            <p>
+                               Este proyecto consistio en desarrollar un inteface de usuario donde 
+                                los usuario pudieran dar mantenimientos a la base de datos.
+                            </p>
+                            <p>
+                                La interface proporcionaba datos de consultas, agegar, elimiar y editar 
+                                las las tablas de candidatos, distritos, usuario, roles de usuario y 
+                                partidos politicos.
+                            </p>
+                            <p>
+                                Fue desarollado principalmente con:
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>MVC</li>
+                                    <li>MSSQL</li>
+                                    <li>BOOTSTRAP</li>
+                                    <li>FRAMEWORK</li>
+                                </ul>
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>
+                                    Cliente:
+                                    <strong>
+                                        <a >Jaylli Arteaga</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Feccha:
+                                    <strong>
+                                        <a >Agosto 2017</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Servicio:
+                                    <strong>
+                                        <a>Desarrollo Web</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button class="btn btn-success" type="button" data-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                            <h2>Game</h2>
+                            <hr class="star-primary">
+                            <img class="img-fluid img-centered" src=@Url.Content("~/Content/img/portfolio/Game.png") alt="">
+                            <p>
+                               Es un video juego de peleas. El proyecto cuenta con tres capas
+                                <ul>
+                                    <li>Usuario</li>
+                                    <li>Modelo</li>
+                                    <li>Capa de Negocios</li>
+                                </ul>
+                            </p>
+                            <p> Además,  se Desarrollo con:
+                                <ul>
+                                    <li>Visaul Studio</li>
+                                    <li>MSSQL</li>
+                                    <li>C#</li>
+                                    <li>Windows Form</li>
+                                    
+                                </ul>
+                            </p>
+                           
+                            <ul class="list-inline item-details">
+                                <li>
+                                    Cliente:
+                                    <strong>
+                                        <a">Jaylli Arteaga</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Fecha:
+                                    <strong>
+                                        <a>Agosto 2017</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Servicio:
+                                    <strong>
+                                        <a >Desarrollo Web</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button class="btn btn-success" type="button" data-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                            <h2>Administardor del Deporte</h2>
+                            <hr class="star-primary">
+                            <img class="img-fluid img-centered" src=@Url.Content("~/Content/img/portfolio/Deportistas.png") alt="">
+                            <p>
+                               El proyecto consiste en dar matenimiento a diversas tablas de base de datos 
+                                que los mismos usuarios alimentan desde esta interface grafica. Además,  
+                                cuenta con tres capas de Desarrollo.
+
+                            </p>
+                            <p> Se Desarrollo principalmente con:
+                                <ul>
+                                    <li>Visual Studio</li>
+                                    <li>MSSQL</li>
+                                    <li>Entiti Framework</li>
+                                    <li>Windows Form</li>
+                                </ul>
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>
+                                    Cliente:
+                                    <strong>
+                                        <a>Jaylli Arteaga</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Fecha:
+                                    <strong>
+                                        <a>Septiembre 2017</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Servicio:
+                                    <strong>
+                                        <a>Desarrollo Web</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button class="btn btn-success" type="button" data-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="modal-body">
+                            <h2>TOT</h2>
+                            <hr class="star-primary">
+                            <img class="img-fluid img-centered" src=@Url.Content("~/Content/img/portfolio/tot.png") alt="">
+                            <p>
+                               Es una LandyPage, de la aplicación TOT. Esta aplicación se desarrollo para disposivos
+                                Androi y IOS. 
+                                <a href="http://totupc.tk/">TOT</a>
+                            </p>
+                            <ul class="list-inline item-details">
+                                <li>
+                                    Cliente:
+                                    <strong>
+                                        <a>Anguel Augusto Velazquez</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Fecha:
+                                    <strong>
+                                        <a>Agosto 2017</a>
+                                    </strong>
+                                </li>
+                                <li>
+                                    Servicio:
+                                    <strong>
+                                        <a>Desarrollo Web</a>
+                                        <a>Android</a>
+                                    </strong>
+                                </li>
+                            </ul>
+                            <button class="btn btn-success" type="button" data-dismiss="modal">
+                                <i class="fa fa-times"></i>
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
